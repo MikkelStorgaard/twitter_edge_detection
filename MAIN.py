@@ -15,13 +15,13 @@ def main():
 
         filtered = cv2.bilateralFilter(img_grey, 25, 40, 40)
         cv2.imshow('image', filtered)
-        cv2.imwrite(f"{path}filtered.jpg", billede)
+        cv2.imwrite(f"{path}filtered.jpg", filtered)
         cv2.waitKey(0)
 
         cannied = cv2.Canny(filtered, 50, 200)
 
         cv2.imshow('image', cannied)
-        cv2.imwrite(f"{path}cannied.jpg", billede)
+        cv2.imwrite(f"{path}cannied.jpg", cannied)
         cv2.waitKey(0)
         cv2.destroyAllWindows()
 
